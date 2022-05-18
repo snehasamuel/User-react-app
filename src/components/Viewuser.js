@@ -260,23 +260,54 @@ return <div className="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
  
   <div class="card-body">
   <center><img src={value.image} style={{width:150,height:150}} class="card-img-top" alt="..."/></center>
-    <h5 class="card-title">{value.name}</h5>
-    
-    <p class="card-text">{value.username}</p>
-    <p class="card-text">{value.email}</p>
+    <h5 class="card-title"><b>Name :</b> {value.name}</h5>
+     <p class="card-text"><b>User Name : </b>{value.username}</p>
+    <p class="card-text"><b>Email id :</b>{value.email}</p>
 
-    <p class="card-text">{value.address.street}</p>
+
+
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+     <strong> View Address</strong>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+      <p class="card-text">{value.address.street}</p>
+      
     <p class="card-text">{value.address.suite}</p>
     <p class="card-text">{value.address.city}</p>
     <p class="card-text">{value.address.zipcode}</p>
     <p class="card-text">{value.address.geo.lat}</p>
     <p class="card-text">{value.address.geo.lng}</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <strong>Company</strong>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
 
-    <p class="card-text">{value.phone}</p>
-    <p class="card-text">{value.website}</p>
-    <p class="card-text">{value.company.name}</p>
+      <p class="card-text">{value.company.name}</p>
     <p class="card-text">{value.company.catchPhrase}</p>
     <p class="card-text">{value.company.bs}</p>
+
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+    <p class="card-text"><b>Phone Number : </b>{value.phone}</p>
+    <p class="card-text"><b>Website : </b>{value.website}</p>
+    
     
    
     <a href="#" class="btn btn-primary">View More</a>

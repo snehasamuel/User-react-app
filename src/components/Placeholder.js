@@ -30,13 +30,13 @@ const Placeholder = () => {
     {
       "userId": 1,
       "id": 5,
-      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+      "title": "laboriosam mollitia quasi illum",
       "completed": false
     },
     {
       "userId": 1,
       "id": 6,
-      "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+      "title": "qui ullam ratione quibusdam voomnis",
       "completed": false
     },
     {
@@ -60,7 +60,7 @@ const Placeholder = () => {
     {
       "userId": 1,
       "id": 10,
-      "title": "illo est ratione doloremque quia maiores aut",
+      "title": "illo est ratione doloremque  aut",
       "completed": true
     },
     {
@@ -978,7 +978,7 @@ const Placeholder = () => {
     {
       "userId": 9,
       "id": 163,
-      "title": "natus corrupti maxime laudantium et voluptatem laboriosam odit",
+      "title": "natus corrupti maxime laudantium et ",
       "completed": false
     },
     {
@@ -1214,22 +1214,20 @@ const Placeholder = () => {
     <div className="row">
         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-        
-
-
-
+      
 <div className="row g-3">
     {todolist.map((value,key)=>{
 
       return <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
 
-<div class="card" style={{height:"300"}}>
-  <center><img src="..." class="card-img-top" alt="..."/></center>
+<div class="card" style={{height:"400"}}>
+  
   <div class="card-body">
     <h5 class="card-title">{value.userId}</h5>
     <p class="card-text">{value.title}</p>
-    <p class="card-text">{value.completed}</p>
-    <a href="#" class="btn btn-primary">View More</a>
+    
+    {value.completed ?     <a href="#" class="btn btn-success">COMPLETED </a> :     <a href="#" class="btn btn-danger">NOT COMPLETED</a>}
+
   </div>
 </div>
       

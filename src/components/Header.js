@@ -18,6 +18,10 @@ const Header = () => {
 <Link className="nav-link active"  to="/">View User</Link>
 
         </li>
+        <li className="nav-item">
+<Link className="nav-link active"  to="/todo">Todo</Link>
+
+        </li>
         
       </ul>
     </div>
